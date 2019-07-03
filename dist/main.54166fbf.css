@@ -669,15 +669,6 @@ li {
   height: 3px;
   background: #063693;
 }
-.bookings .tabs:hover {
-  padding: 20px;
-  margin-top: -20px;
-}
-.bookings .tabs:hover hr {
-  width: 150%;
-  height: 3px;
-  background: #063693;
-}
 .bookings .tab-control span {
   color: #999;
   font-size: 18px;
@@ -686,6 +677,9 @@ li {
 .bookings .tab-control p {
   color: #063693;
   font-size: 16px;
+}
+.bookings .tab-control p svg {
+  display: inline-block;
 }
 .bookings .tab-control .tab-control-btn {
   margin: -70px 0px 0px 0px;
