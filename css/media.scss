@@ -732,6 +732,7 @@ $green-color: #00AA63;
 @media only screen and (min-width : 565px) and (max-width : 1024px) {
     /*--- Small tablet landscape ---*/
     body{
+        position: relative;
         display: block;
         overflow-x: hidden;
     }
@@ -754,7 +755,7 @@ $green-color: #00AA63;
         display: none;
     }
     .colored{
-        height: 60vh;
+        height: 30vh;
     }
     .mobile{
         position: relative;
@@ -790,13 +791,11 @@ $green-color: #00AA63;
 
     .nav-menu{
         display: block;
-    //    width: 100px;
-       padding: 20px;
+        padding: 20px;
         color: #fff;
         position: absolute;
         top: 10px;
         right: 0px;
-        // margin-right: -40px;
         font-size: 26px;
        
 
@@ -807,7 +806,7 @@ $green-color: #00AA63;
 
     main {
        
-        height: 715px ;
+        height: 694px ;
         padding-bottom: 50px;
         
     }
@@ -846,7 +845,7 @@ $green-color: #00AA63;
 
     .home-card {
         margin: 20px 0px;
-        width: 600px;
+        width: auto;
         height: 450px;
         background: #fff;
         border-radius: 10px;
@@ -1043,10 +1042,6 @@ $green-color: #00AA63;
             }
         }
 
-        .tabs:hover{
-            padding: inherit;
-            margin: inherit;
-        }
         
         .tab-control{
             margin: 50px 0px;
@@ -1161,19 +1156,20 @@ $green-color: #00AA63;
     }
 
     .btn-notRounded{
-        bottom: -700px;
-        left: 180px;
+        width: 80%;
+        bottom: 50px;
+        left: 80px;
 
     }
 
     .sticky{
-        left: 10px;
+        
         bottom: -10px;
     }
 
     .sticky-green{
         bottom: -920px;
-        left: 10px;
+       
     }
 
     //section-page
