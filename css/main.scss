@@ -827,6 +827,10 @@ li {
         p {
             color: $base-color;
             font-size: 16px;
+            svg{
+                display: inline-block;
+            }
+        
         }
 
         .tab-control-btn {

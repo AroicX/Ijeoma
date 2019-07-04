@@ -315,13 +315,18 @@ $green-color: #00AA63;
             }
         }
 
-        .tabs:hover{
-            padding: inherit;
-            margin: inherit;
+        .tabs:focus{
+           outline: none;
         }
         
         .tab-control{
             margin: 50px 0px;
+            p{
+                
+                svg{
+                    display: inline-block;
+                }
+            }
         }
 
         .booking-box {
@@ -340,6 +345,7 @@ $green-color: #00AA63;
         display: none;
     }
 
+<<<<<<< HEAD
     .booking-time {
     
         span {
@@ -348,6 +354,31 @@ $green-color: #00AA63;
     
         }
     }
+=======
+
+    .booking-time {
+        position: relative;
+
+        p {
+
+            color: #677994;
+            display: block;
+            font-weight: bold;
+            margin: 0px;
+        }
+
+
+        span {
+            font-size: 9px;
+            margin: 0px;
+
+        }
+    }
+    .booking-box:focus{
+        outline: none;
+        background: transparent;
+    }
+>>>>>>> master
 
     //next-page
     .home-footer{
@@ -377,6 +408,8 @@ $green-color: #00AA63;
         display: block;
         padding: 0px;
         margin: 0px;
+        padding: 10px 20px;
+
         .display-left{
             padding: 0px;
             margin: 0px;
@@ -1045,6 +1078,7 @@ $green-color: #00AA63;
         
         .tab-control{
             margin: 50px 0px;
+           
         }
 
         .booking-box {
