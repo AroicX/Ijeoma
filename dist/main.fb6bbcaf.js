@@ -26640,6 +26640,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   (0, _jquery.default)(".nav-menu").click(function () {
     (0, _jquery.default)(".mobile").slideToggle("slow");
   });
+  (0, _jquery.default)(".nav-search").click(function () {
+    (0, _jquery.default)(".backdrop").toggle("slow");
+    (0, _jquery.default)(".wrapper").toggle("slow");
+  });
+  (0, _jquery.default)(".backdrop").click(function () {
+    (0, _jquery.default)(".backdrop").fadeOut(400);
+    (0, _jquery.default)(".wrapper").fadeOut(300);
+  });
 });
 },{"jquery":"node_modules/jquery/dist/jquery.js","./transition":"js/transition.js"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -26669,7 +26677,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52683" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49447" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

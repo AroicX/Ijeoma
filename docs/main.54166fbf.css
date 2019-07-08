@@ -161,6 +161,9 @@ li {
 .nav-menu {
   display: none;
 }
+.nav-search{
+   display: none;
+  }
 
 .btn-mobile {
   display: none;
