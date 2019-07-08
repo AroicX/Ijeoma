@@ -630,7 +630,8 @@
   .btn-mobile {
     display: block;
     bottom: 30px;
-    left: 350px;
+    left: 50px;
+    width: 90%;
   }
 
   .navbar {
@@ -642,7 +643,7 @@
   }
 
   .colored {
-    height: 30vh;
+    height: 25vh;
   }
 
   .mobile {
@@ -882,9 +883,20 @@
   .booking-time {
     position: relative;
   }
-  .booking-time span {
-    margin: 0px 130px;
+    .booking-time {
+    position: relative;
   }
+  .booking-time p {
+    color: #677994;
+    display: block;
+    font-weight: bold;
+    margin: 0px;
+  }
+  .booking-time span {
+    font-size: 12px;
+    margin: 0px;
+  }
+
 
   .home-footer {
     display: inline-block;
