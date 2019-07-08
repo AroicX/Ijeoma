@@ -12,6 +12,7 @@
   .btn-mobile {
     display: block;
     bottom: 40px;
+    left: 100px;
   }
 
   .navbar {
@@ -246,15 +247,16 @@
     display: inline;
     top: 70px;
     left: -40px;
-    height: 3px;
     background: #063693;
   }
-  .bookings .tabs:hover {
-    padding: inherit;
-    margin: inherit;
+  .bookings .tabs:focus {
+    outline: none;
   }
   .bookings .tab-control {
     margin: 50px 0px;
+  }
+  .bookings .tab-control p svg {
+    display: inline-block;
   }
   .bookings .booking-box {
     width: 100%;
@@ -266,6 +268,25 @@
 
   .booking-ticket {
     display: none;
+  }
+
+  .booking-time {
+    position: relative;
+  }
+  .booking-time p {
+    color: #677994;
+    display: block;
+    font-weight: bold;
+    margin: 0px;
+  }
+  .booking-time span {
+    font-size: 9px;
+    margin: 0px;
+  }
+
+  .booking-box:focus {
+    outline: none;
+    background: transparent;
   }
 
   .home-footer {
@@ -293,6 +314,7 @@
     display: block;
     padding: 0px;
     margin: 0px;
+    padding: 10px 20px;
   }
   .next-page .display-left {
     padding: 0px;
@@ -496,20 +518,119 @@
     line-height: 24px;
     color: #3B567F;
   }
-}
-@media only screen and (min-width: 690px) and (max-width: 800px) {
+
+  .discover {
+    color: #fff;
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 100px 100px;
+  }
+
+  .discovery {
+    display: none;
+    width: 100%;
+    height: 9vh;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(176, 176, 176, 0.25);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .discovery .discovery-footer-body {
+    display: none;
+    align-content: center;
+    vertical-align: middle;
+    margin-left: 200px;
+  }
+  .discovery .nav-links {
+    padding: 10px 15px;
+    width: 120px auto;
+    height: 4rem;
+    color: #CED8E7;
+    margin: 0px 10px;
+  }
+  .discovery .nav-links .active {
+    color: #3B567F !important;
+  }
+  .discovery input[type=search] {
+    width: 400px;
+    height: 5vh;
+    padding: 15px 10px;
+    border: 0.3px solid #677994;
+    box-sizing: border-box;
+    border-radius: 34px;
+    float: right;
+  }
+
   body {
+    background: #E5E5E5;
+  }
+  body .discovery_section {
+    width: auto;
+    height: 1000px auto;
+    display: block;
+    flex-direction: none;
+    padding: 10px 5px;
+  }
+  body .discovery_section .discovery_card {
+    background: #fff;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 10px 0px;
+    box-shadow: 0px 2px 10px rgba(176, 176, 176, 0.25);
+  }
+  body .discovery_section .discovery_card .img-text {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-weight: lighter;
+    color: white;
+    left: 25px;
+    font-size: 24px;
+    margin-left: 10px;
+    top: 20px;
+    text-emphasis: bold;
+  }
+  body .discovery_section .discovery_card .discovery_container {
+    padding: 16px 16px;
+  }
+  body .discovery_section .discovery_card .discovery_container .btn-link {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #06296C;
+    background-color: #06296C;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 3px;
+    color: #fff;
+  }
+  body .discovery_section .discovery_card .discovery_container .discovery-text {
+    padding: 10px 5px;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media only screen and (min-width: 565px) and (max-width: 1024px) {
+  /*--- Small tablet landscape ---*/
+  body {
+    position: relative;
     display: block;
     overflow-x: hidden;
   }
 
   nav {
-    padding: 30px 0px;
+    padding: 20px 0px;
   }
 
   .btn-mobile {
     display: block;
-    bottom: 40px;
+    bottom: 30px;
+    left: 350px;
   }
 
   .navbar {
@@ -563,7 +684,7 @@
   }
 
   main {
-    height: 715px;
+    height: 694px;
     padding-bottom: 50px;
   }
 
@@ -595,7 +716,7 @@
 
   .home-card {
     margin: 20px 0px;
-    width: 320px;
+    width: auto;
     height: 450px;
     background: #fff;
     border-radius: 10px;
@@ -607,14 +728,12 @@
     display: block;
     position: relative;
     justify-content: none;
-    height: 350px;
+    height: 300px;
   }
   .home-secondary .home-text {
     position: relative;
-    top: 50px;
-    right: 20px;
-    margin: 70px 20px 20px 20px;
-    padding-bottom: 50px;
+    top: 100px;
+    right: -5px;
   }
   .home-secondary h1 {
     color: #fff;
@@ -632,12 +751,7 @@
   }
   .home-secondary .home-icons {
     display: inline-flex;
-    position: absolute;
-    bottom: -80px;
-    right: 40px;
-    padding: 20px;
-    height: 200px;
-    padding-bottom: 60px;
+    margin: -20px 20px 20px 300px;
   }
   .home-secondary .icon-box {
     cursor: pointer;
@@ -659,15 +773,19 @@
     margin: 0px;
   }
   .what-we-do .ij-grid {
+    text-align: justify;
     width: auto;
     padding: 10px;
+  }
+  .what-we-do .ij-grid img {
+    width: 100%;
   }
 
   .ij-trust {
     display: block;
     background: #063693;
     width: 100%;
-    height: 500px;
+    height: 200px;
     position: relative;
   }
   .ij-trust .cutout {
@@ -679,14 +797,14 @@
   }
   .ij-trust .trust-view {
     width: 100%;
-    display: block;
+    display: flex;
     margin: 10px 0px;
   }
   .ij-trust .trust-view .trust-images {
-    width: 200px;
+    width: 120px;
     height: 50px auto;
-    padding: 5px;
-    margin: 0px 80px;
+    padding: -20px;
+    margin: 20px 20px 0px 20px;
   }
   .ij-trust .trust-view img {
     width: 100%;
@@ -707,19 +825,19 @@
     padding-bottom: 100px;
   }
   .bookings .tabs {
-    width: 30px;
+    width: 120px;
     position: relative;
     margin: 1px 28px;
   }
   .bookings .tabs img {
-    width: 40px;
-    height: 40px;
+    width: 150px;
+    height: 55px;
     position: absolute;
     top: 10px;
     left: -40px;
   }
   .bookings .tabs p {
-    margin-left: -20px;
+    margin-left: 45px;
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
@@ -732,7 +850,7 @@
     font-weight: bold;
   }
   .bookings .tabs hr {
-    width: 150%;
+    width: 100%;
     display: none;
     margin: 0px !important;
   }
@@ -744,19 +862,14 @@
     display: inline;
     top: 70px;
     left: -40px;
-    height: 3px;
     background: #063693;
-  }
-  .bookings .tabs:hover {
-    padding: inherit;
-    margin: inherit;
   }
   .bookings .tab-control {
     margin: 50px 0px;
   }
   .bookings .booking-box {
     width: 100%;
-    margin: 0px;
+    margin: 5px;
   }
   .bookings .booking-box div {
     width: auto;
@@ -764,6 +877,13 @@
 
   .booking-ticket {
     display: none;
+  }
+
+  .booking-time {
+    position: relative;
+  }
+  .booking-time span {
+    margin: 0px 130px;
   }
 
   .home-footer {
@@ -775,6 +895,7 @@
     top: 10px;
     left: 0;
     display: inline-block;
+    text-align: center;
   }
   .home-footer .home-footer-body svg {
     width: 25px;
@@ -789,7 +910,7 @@
 
   .next-page {
     display: block;
-    padding: 0px;
+    padding: 20px;
     margin: 0px;
   }
   .next-page .display-left {
@@ -799,9 +920,13 @@
   }
   .next-page .display-left .card-box {
     width: 100%;
+    padding: 20px;
   }
   .next-page .display-left .card-box .ticket-time {
     margin: 30px 10px;
+  }
+  .next-page .display-left .card-box img {
+    margin: 30px;
   }
   .next-page .display-right {
     padding: 0px;
@@ -830,18 +955,17 @@
   }
 
   .btn-notRounded {
-    bottom: -55rem;
-    left: 50px;
+    width: 80%;
+    bottom: 50px;
+    left: 80px;
   }
 
   .sticky {
-    left: 10px;
     bottom: -10px;
   }
 
   .sticky-green {
     bottom: -920px;
-    left: 10px;
   }
 
   .section-page {
@@ -993,6 +1117,105 @@
     font-size: 16px;
     line-height: 24px;
     color: #3B567F;
+  }
+
+  .discover {
+    color: #fff;
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 100px 100px;
+  }
+
+  .discovery {
+    display: none;
+    width: 100%;
+    height: 9vh;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(176, 176, 176, 0.25);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .discovery .discovery-footer-body {
+    display: none;
+    align-content: center;
+    vertical-align: middle;
+    margin-left: 200px;
+  }
+  .discovery .nav-links {
+    padding: 10px 15px;
+    width: 120px auto;
+    height: 4rem;
+    color: #CED8E7;
+    margin: 0px 10px;
+  }
+  .discovery .nav-links .active {
+    color: #3B567F !important;
+  }
+  .discovery input[type=search] {
+    width: 400px;
+    height: 5vh;
+    padding: 15px 10px;
+    border: 0.3px solid #677994;
+    box-sizing: border-box;
+    border-radius: 34px;
+    float: right;
+  }
+
+  body {
+    background: #E5E5E5;
+  }
+  body .discovery_section {
+    width: auto;
+    height: 1000px auto;
+    display: block;
+    flex-direction: none;
+    padding: 10px 5px;
+  }
+  body .discovery_section .discovery_card {
+    background: #fff;
+    position: relative;
+    float: left;
+    width: 40%;
+    margin: 10px 40px;
+    box-shadow: 0px 2px 10px rgba(176, 176, 176, 0.25);
+  }
+  body .discovery_section .discovery_card img {
+    width: auto;
+  }
+  body .discovery_section .discovery_card .img-text {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-weight: lighter;
+    color: white;
+    left: 25px;
+    font-size: 24px;
+    margin-left: 10px;
+    top: 20px;
+    text-emphasis: bold;
+  }
+  body .discovery_section .discovery_card .discovery_container {
+    padding: 16px 16px;
+  }
+  body .discovery_section .discovery_card .discovery_container .btn-link {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #06296C;
+    background-color: #06296C;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 3px;
+    color: #fff;
+  }
+  body .discovery_section .discovery_card .discovery_container .discovery-text {
+    padding: 10px 5px;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
