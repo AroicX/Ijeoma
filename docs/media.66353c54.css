@@ -218,13 +218,14 @@
  .wrapper {
 
     background: #fff;
-    width: 80%;
+    width: 100%;
     height: 60vh;
     display: block;
     z-index: 10;
     display: none;
     justify-content: space-between;
     position: fixed;
+    left: 10px;
     border-radius: 0px;
   }
   .wrapper form {
@@ -235,7 +236,7 @@
 .wrapper .booking-form {
   display: block;
   position: relative;
-  width: 35vh;
+  width: 20vh;
   background: none;
   padding: 5px 10px;
   border-radius: 5px;
@@ -243,7 +244,7 @@
   margin: 5px 5px;
 }
 .wrapper .booking-form input {
-  width: 100%;
+  width: 60%;
   margin-left: 40px;
   background: none;
   padding: 8px 10px;
@@ -253,7 +254,7 @@
   border-radius: 3px;
 }
 .wrapper .booking-form.small {
-  width: 100%;
+  width: 60%;
 }
 .wrapper .form-icon {
   position: absolute;
