@@ -26641,8 +26641,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     (0, _jquery.default)(".mobile").slideToggle("slow");
   });
   (0, _jquery.default)(".nav-search").click(function () {
-    (0, _jquery.default)(".backdrop").toggle("slow");
-    (0, _jquery.default)(".wrapper").toggle("slow");
+    (0, _jquery.default)(".backdrop").slideToggle("slow");
+    (0, _jquery.default)(".wrapper").slideToggle("slow");
   });
   (0, _jquery.default)(".backdrop").click(function () {
     (0, _jquery.default)(".backdrop").fadeOut(400);
