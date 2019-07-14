@@ -26643,7 +26643,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   $( "#depature" ).datepicker();
   $( "#depature-mini" ).datepicker();
   $( "#arrival" ).datepicker();
-  $( "#arrival-mini" ).datepicker();
+
 });
 var openmodal = document.querySelectorAll('.modal-open');
 
