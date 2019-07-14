@@ -252,6 +252,7 @@
 }
 .wrapper .booking-form input {
   /* width: 60%; */
+  /* position: fixed; */
   margin-left: 0px;
   background: none;
   padding: 8px 10px;

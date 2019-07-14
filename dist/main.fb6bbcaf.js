@@ -26649,6 +26649,45 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     (0, _jquery.default)(".wrapper").fadeOut(300);
   });
 });
+var openmodal = document.querySelectorAll('.modal-open');
+
+for (var i = 0; i < openmodal.length; i++) {
+  openmodal[i].addEventListener('click', function (event) {
+    event.preventDefault();
+    toggleModal();
+  });
+}
+
+var overlay = document.querySelector('.modal-overlay');
+overlay.addEventListener('click', toggleModal);
+var closemodal = document.querySelectorAll('.modal-close');
+
+for (var i = 0; i < closemodal.length; i++) {
+  closemodal[i].addEventListener('click', toggleModal);
+}
+
+document.onkeydown = function (evt) {
+  evt = evt || window.event;
+  var isEscape = false;
+
+  if ("key" in evt) {
+    isEscape = evt.key === "Escape" || evt.key === "Esc";
+  } else {
+    isEscape = evt.keyCode === 27;
+  }
+
+  if (isEscape && document.body.classList.contains('modal-active')) {
+    toggleModal();
+  }
+};
+
+function toggleModal() {
+  var body = document.querySelector('body');
+  var modal = document.querySelector('.modal');
+  modal.classList.toggle('opacity-0');
+  modal.classList.toggle('pointer-events-none');
+  body.classList.toggle('modal-active');
+}
 },{"jquery":"node_modules/jquery/dist/jquery.js","./transition":"js/transition.js"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -26677,7 +26716,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49447" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54036" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
