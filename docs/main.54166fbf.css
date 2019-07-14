@@ -440,7 +440,7 @@ li {
   display: inline-block;
   position: relative;
   width: 20%;
-  background: #F0F4FD;
+  /* background: #F0F4FD; */
   padding: 4px 10px;
   border-radius: 5px;
   color: #2B2B2B;
@@ -449,7 +449,7 @@ li {
 .wrapper .booking-form input {
   width: 80%;
   margin-left: 20px;
-  background: #F0F4FD;
+  /* background: #F0F4FD; */
   padding: 5px 10px;
   color: #2B2B2B;
 }
