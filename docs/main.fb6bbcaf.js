@@ -26640,7 +26640,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   (0, _jquery.default)(".nav-menu").click(function () {
     (0, _jquery.default)(".mobile").slideToggle("slow");
   });
-
+  $( "#depature" ).datepicker();
+  $( "#depature-mini" ).datepicker();
+  $( "#arrival" ).datepicker();
+  $( "#arrival-mini" ).datepicker();
 });
 var openmodal = document.querySelectorAll('.modal-open');
 

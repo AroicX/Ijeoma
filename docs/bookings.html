@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./main.54166fbf.css">
     <link rel="stylesheet" href="./media.66353c54.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Booking Page</title>
 </head>
 
@@ -27,32 +30,61 @@
             </ul>
         </nav>
 
-        
+
         <div class="wrapper">
             <form action="">
                 <div class="booking-form">
                     <img class="form-icon" src="./location.50d16977.svg" alt="location">
-                    <input type="text" placeholder="Leaving From?">
+                    <input type="text" placeholder="Leaving From?" value="Kaduna">
                 </div>
                 <div class="booking-form">
                     <img class="form-icon" src="./location.50d16977.svg" alt="location">
-                    <input type="text" placeholder="Going To?">
+                    <input type="text" placeholder="Going To?" value="Lagos">
                 </div>
                 <div class="booking-form small">
                     <img class="form-icon" src="./location.50d16977.svg" alt="location">
-                    <input type="datetime" placeholder="Mon,May 12">
+                    <input type="datetime" id="depature" placeholder="Mon,May 12" value="07/18/2019">
                 </div>
                 <div class="booking-form small">
                     <img class="form-icon" src="./location.50d16977.svg" alt="location">
-                    <input type="datetime" placeholder="Fri,May 18">
+                    <input type="datetime" id="arrival" placeholder="Fri,May 18" value="07/25/2019">
+                </div>
+                <div class="booking-form small" title="Passengers">
+
+
+                    <select title="Passengers"
+                        class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </div>
+
+
+
+
                 </div>
                 <div class="booking-form small">
-                    <img class="form-icon" src="./location.50d16977.svg" alt="location">
-                    <input type="text" placeholder="4 Passengers">
-                </div>
-                <div class="booking-form small">
-                    <img class="form-icon" src="./location.50d16977.svg" alt="location">
-                    <input type="text" placeholder="Class">
+                    <select
+                        class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                        <option>Class</option>
+                        <option>First Class</option>
+                        <option>Economy Class</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </div>
                 </div>
 
                 <div class="smaller">
@@ -210,7 +242,7 @@
 
     </section>
 
-   
+
     <!--Modal-->
     <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
         <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
@@ -249,59 +281,64 @@
                             id="Going To?" type="text" placeholder="Going To?">
                     </div>
                     <div class="mb-4">
-                        <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="Mon ,May 2018" type="text" placeholder="Mon ,May 2018">
-                    </div>
-                    <div class="mb-4">
-                        <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="Fri ,May 2018" type="text" placeholder="Fri ,May 2018">
-                    </div>
-                    <div class="mb-4">
+                        <div class="mb-4">
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="Mon ,May 2018" type="datetime" id="depature-mini" placeholder="Mon ,May 2018">
+                        </div>
+                        <div class="mb-4">
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="Fri ,May 2018" type="datetime" id="arrival-mini" placeholder="Fri ,May 2018">
+                        </div>
+                        <div class="mb-4">
 
-                        <select
-                            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                            <option>Passengers</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                        </select>
-                        <div
-                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            <select
+                                class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                                <option>Passengers</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                 </svg>
+                            </div>
+
+                        </div>
+                        <div class="mb-4">
+
+                            <select
+                                class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                                <option>Class</option>
+                                <option>First Class</option>
+                                <option>Economy Class</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                            </div>
+
                         </div>
 
-                    </div>
-                    <div class="mb-4">
-
-                        <select
-                            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                            <option>Class</option>
-                            <option>First Class</option>
-                            <option>Economy Class</option>
-                        </select>
-                        <div
-                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                </svg>
+                        <div class="mb-4">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 "
+                                style="width: 100% !important;">
+                                Search Route
+                            </button>
                         </div>
-
-                    </div>
-
-                    <div class="mb-4">
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 "
-                            style="width: 100% !important;">
-                            Search Route
-                        </button>
-                    </div>
 
 
                 </form>
@@ -321,7 +358,7 @@
     </div>
 
 
-  
+
 
 
     <script src="./main.fb6bbcaf.js"></script>
